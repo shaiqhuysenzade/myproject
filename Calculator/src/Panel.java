@@ -73,8 +73,12 @@ public class Panel extends JPanel {
                 if (op[0].equals("*")) {
                     res = num1[0] * num1[1];
                 }
-
-
+                if(op[0].equals("-")){
+                    res=num1[0]-num1[1];
+                }
+                if(op[0].equals("/")){
+                    res=num1[0]/num1[1];
+                }
                 output.setText(String.valueOf(res));
 
             } else if (b.getText().equals("+")) {
@@ -84,6 +88,12 @@ public class Panel extends JPanel {
 
             }else if(b.getText().equals("-")){
                 num1[0]=Double.parseDouble(output.getText());
+                output.setText("");
+                op[0]="-";
+            } else if(b.getText().equals("/")){
+                num1[0]=Double.parseDouble(output.getText());
+                output.setText("");
+                op[0]="/";
             }
             else {
                 output.setText(output.getText() + b.getText());
