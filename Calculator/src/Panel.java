@@ -97,6 +97,8 @@ public class Panel extends JPanel {
         multi.addActionListener(l);
         equ.addActionListener(l);
         plus.addActionListener(l);
+        minus.addActionListener(l);
+        div.addActionListener(l);
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
